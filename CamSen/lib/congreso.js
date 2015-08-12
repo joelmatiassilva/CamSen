@@ -57,4 +57,5 @@ function construir(c) {
     c.crearBancas();
 }
 
+//polimorfismo
 [camaraAlta, camaraBaja].forEach(construir);
