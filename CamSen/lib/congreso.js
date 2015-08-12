@@ -1,5 +1,6 @@
 "uses strict";
 // Congreso - superclass
+
 var Congreso = function() {
   this.div;	
   this.path;
@@ -20,7 +21,8 @@ Congreso.prototype.crearEdificios = function() {
 // superclass método
 Congreso.prototype.crearBancas = function() {
 	this.banca = this.div.circle(this.coorCirc1, this.coorCirc2, this.coorCirc3);
-    this.banca.attr(this.attrBanca);
+  this.banca.attr(this.attrBanca);
+  $(this.banca.node).qtip(this.datosQtip);
 };
 
 // subclass
@@ -31,6 +33,20 @@ var CamaraAlta = function() {
   this.coorCirc2= 227.499999;
   this.coorCirc3= 5.070313;
   this.attrBanca = { fill: 'blue', stroke: 'red', 'stroke-width': 1, 'stroke-linejoin': 'round' } 
+  this.datosQtip = { content: 
+            { text: '<img src=imagenes/SenDanielFernandoFilmus.jpg style=display: none /><br/>Daniel Fernando Filmus <br/>Alianza Frente para la Victoria</a>'},
+                style: {
+                    background: 'white',
+                    color: 'blue',
+                    border: { width: 6, radius: 3, color: 'blue' }
+                },
+                position: {
+                    corner: {
+                        target: 'topRight',
+                        tooltip: 'bottomLeft'
+                    }
+                }
+            };
   Congreso.call(this); // llama a constructor
 }
 
@@ -42,6 +58,19 @@ var CamaraBaja = function() {
   this.coorCirc2= 200.499999;
   this.coorCirc3= 5.070313;
   this.attrBanca = { fill: 'red', stroke: 'black', 'stroke-width': 1, 'stroke-linejoin': 'round' };
+  this.datosQtip = { content: { text: '<img src=imagenes/DipEricCalcagnoyMaillman.jpg style=display: none /><br/>ERIC CALCAGNO Y MAILLMAN <br/>Alianza Frente para la Victoria</a>'},
+                      style: {
+                          background: 'white',
+                          color: 'blue',
+                          border: { width: 6, radius: 3, color: 'blue' }
+                      },
+                      position: {
+                          corner: {
+                              target: 'topRight',
+                              tooltip: 'bottomLeft'
+                          }
+                      }
+                  };
   Congreso.call(this); // llama a constructor
 }
 
