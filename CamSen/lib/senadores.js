@@ -1,4 +1,4 @@
-          jQuery(function ($)
+jQuery(function ($)
         {
 			$(camaraBaja.banca.node).qtip({ content: 
 { text: '<img src=imagenes/DipEricCalcagnoyMaillman.jpg style=display: none /><br/>ERIC CALCAGNO Y MAILLMAN <br/>Alianza Frente para la Victoria</a>'},

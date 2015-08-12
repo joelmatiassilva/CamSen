@@ -8,7 +8,11 @@ var Congreso = function() {
 
 // superclass método
 Congreso.prototype.crearEdificios = function() {
-	this.div = Raphael(document.getElementById(this.idDiv), 800, 400);
+	var svgWidth = 800;
+	var svgHeight = 400;
+
+	this.div = Raphael(document.getElementById(this.idDiv), "100%", "100%");
+	this.div.setViewBox(0, 0, svgWidth, svgHeight, true);
 	this.path  = this.div.path(this.pathCode);
 
 };
