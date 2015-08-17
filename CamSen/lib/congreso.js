@@ -19,10 +19,12 @@ Congreso.prototype.crearEdificios = function() {
 };
 
 // superclass método
-Congreso.prototype.crearBancas = function() {
-	this.banca = this.div.circle(this.coorCirc1, this.coorCirc2, this.coorCirc3);
+Congreso.prototype.crearBancas = function(p) {
+  //console.log(p["x"]);
+	this.banca = this.div.circle(p["x"], p["y"], this.coorCirc3);
   this.banca.attr(this.attrBanca);
-  $(this.banca.node).qtip(this.datosQtip);
+  //console.log(this.banca);
+  //$(this.banca.node).qtip(this.datosQtip);
 };
 
 // subclass
@@ -87,8 +89,10 @@ var camaraBaja = new CamaraBaja();
 
 function construir(c) {
     c.crearEdificios();
-    c.crearBancas();
-}
+    //c.crearBancas();
+};
+
 
 //polimorfismo
 [camaraAlta, camaraBaja].forEach(construir);
+
