@@ -38,14 +38,6 @@
         padding: 14px 24px;
       }
 
-      /* Supporting marketing content */
-      .marketing {
-        margin: 60px 0;
-      }
-      .marketing p + h4 {
-        margin-top: 28px;
-      }
-
 
     </style>
 
@@ -68,8 +60,6 @@
 
 	    <div id="camaraAlta"></div>
       <div id="camaraBaja"></div>
-
-
     
       <hr>
 
@@ -88,6 +78,22 @@
     <script type="text/javascript" src="lib/raphael-min.js"></script>  
     <script type="text/javascript" src="lib/jquery.qtip-1.0.0-rc3.min.js" charset="utf-8"></script>
     <script type="text/javascript" src="lib/congreso.js"></script>
+
+    <script src="lib/bezierjs/bezier.js"></script>
+    <script src="lib/bezierjs/draw.js"></script>
+    <script src="lib/bezierjs/interaction.js"></script>
+    <script src="lib/bezierjs/loader.js"></script>
+
+
+        <script type="text/beziercode">
+
+            new Bezier(90,330, 275,-120, 485,330);
+            var draw = function() {
+              drawSkeleton(curve);
+              var LUT = curve.getLUT(16);
+              LUT.forEach(function(p) { drawCircle(p,2); });
+            }
+          </script>
 
   </body>
 </html>

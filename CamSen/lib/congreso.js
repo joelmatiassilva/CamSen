@@ -10,10 +10,10 @@ var Congreso = function() {
 // superclass método
 Congreso.prototype.crearEdificios = function() {
 	var svgWidth = 800;
-	var svgHeight = 400;
+	var svgHeight = 800;
 
 	this.div = Raphael(document.getElementById(this.idDiv), "100%", "100%");
-	this.div.setViewBox(0, 0, svgWidth, svgHeight, true);
+	this.div.setViewBox(0, -100, svgWidth, svgHeight, true);
 	this.path  = this.div.path(this.pathCode);
 
 };

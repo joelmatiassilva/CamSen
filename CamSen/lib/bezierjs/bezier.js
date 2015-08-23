@@ -7,7 +7,6 @@
 **/
 (function() {
   "use strict";
-console.log("lalal");
   // Math functions. I hate the Math namespace with a passion.
   var abs = Math.abs,
       min = Math.min,

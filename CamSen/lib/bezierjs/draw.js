@@ -1,5 +1,5 @@
 function bindDrawFunctions(idx) {
-  console.log("bindDrawFunctions");
+  //console.log("bindDrawFunctions");
 
   //JOEL
   //var figure = find("figure")[idx];
@@ -16,9 +16,10 @@ function bindDrawFunctions(idx) {
     getCanvas: function() { return cvs; },
 
     reset: function() {
-      cvs.width = cvs.width;
-      ctx.strokeStyle = "black";
-      ctx.fillStyle = "none";
+      console.log("entra en reset");
+      //cvs.width = cvs.width;
+      //ctx.strokeStyle = "black";
+      //ctx.fillStyle = "none";
     },
 
     setColor: function(c) {

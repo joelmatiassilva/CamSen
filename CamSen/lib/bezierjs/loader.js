@@ -10,7 +10,6 @@ var open = false;
 
 function loadAll() {
   var list = find("script[type='text/beziercode']");
-  console.log(list);
   list.forEach(function(e, idx) {
     var figure = e.parentNode;
     var code = e.textContent.substring(1).split("\n");
